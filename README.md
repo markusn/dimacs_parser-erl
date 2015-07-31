@@ -10,7 +10,7 @@ Parse DIMACS files into Erlang structures defined in `src/dimacs_parser.erl`.
 Only supports CNF files at the moment
 
 ## Author
-Markus Näsman (markus at botten dot org).
+Markus Ekholm (markus at botten dot org).
 
 ## License
 3-clause BSD. For details see `LICENSE`.
