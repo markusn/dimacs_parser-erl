@@ -1,4 +1,11 @@
+before_install:
+   - wget https://s3.amazonaws.com/rebar3/rebar3
+   - chmod u+x ./rebar3
+install: "true"
 language: erlang
+sudo: false
 otp_release:
-   - R16B
-script: "./rebar compile && ./rebar -D NO_INTEGRATION_TESTS skip_deps=true eunit"
+  - 21.0
+script:
+  ./rebar3 do eunit,edoc
+  ./rebar3 coveralls send
